@@ -1,0 +1,1 @@
+This Website gives information about all upcoming and ongoing coding contests listed on various coding platforms like CodeForces, CodeChef, LeetCode, etc. It provides the contest link and shows their starting time, ending time, and duration.

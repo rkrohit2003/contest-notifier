@@ -1,0 +1,16 @@
+h1,h2{
+    text-align: center;
+}
+.minH{
+    min-height: 90vh;
+}
+.over{
+    overflow: auto;
+}
+thead{
+    position: "sticky";
+    top: "0";
+}
+a{
+    color: black;
+}
