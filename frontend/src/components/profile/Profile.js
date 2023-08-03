@@ -236,7 +236,7 @@ export const Profile = () => {
     try {
       await axios.put(`http://localhost:8000/api/user/${user._id}`, user);
       localStorage.setItem('isLoggedIn', user.userName.toString());
-      window.location = '/contest-tracker/';
+      window.location = '/contest-notifier/';
     } catch (error) {
       console.error('Error updating user:', error);
     }

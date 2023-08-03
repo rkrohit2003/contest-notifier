@@ -18,7 +18,7 @@ import { useUserName } from '../../UserNameContext';
 const defaultTheme = createTheme();
 
 export default function SignUp({ setIsLoggedIn }) {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const { setUserName } = useUserName();
   const [user, setUser] = useState({
     userName: '',
@@ -36,7 +36,7 @@ export default function SignUp({ setIsLoggedIn }) {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUser({ ...user, [name]: value });
-    setErrors({ ...errors, [name]: '' }); // Reset the error when the input changes
+    setErrors({ ...errors, [name]: '' });
   };
 
   const handleSubmit = async (event) => {
@@ -115,66 +115,66 @@ export default function SignUp({ setIsLoggedIn }) {
               Sign up
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            id="userName"
-            label="User Name"
-            name="userName"
-            autoComplete="userName"
-            value={user.userName}
-            onChange={handleInputChange}
-            error={!!errors.userName}
-            helperText={errors.userName}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            type="email"
-            name="email"
-            autoComplete="email"
-            value={user.email}
-            onChange={handleInputChange}
-            error={!!errors.email}
-            helperText={errors.email}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="new-password"
-            value={user.password}
-            onChange={handleInputChange}
-            error={!!errors.password}
-            helperText={errors.password}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            name="confirmPassword"
-            label="Confirm Password"
-            type="password"
-            id="confirmPassword"
-            value={user.confirmPassword}
-            onChange={handleInputChange}
-            error={!!errors.confirmPassword}
-            helperText={errors.confirmPassword}
-          />
-        </Grid>
-      </Grid>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="userName"
+                    label="User Name"
+                    name="userName"
+                    autoComplete="userName"
+                    value={user.userName}
+                    onChange={handleInputChange}
+                    error={!!errors.userName}
+                    helperText={errors.userName}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    value={user.email}
+                    onChange={handleInputChange}
+                    error={!!errors.email}
+                    helperText={errors.email}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                    value={user.password}
+                    onChange={handleInputChange}
+                    error={!!errors.password}
+                    helperText={errors.password}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="confirmPassword"
+                    label="Confirm Password"
+                    type="password"
+                    id="confirmPassword"
+                    value={user.confirmPassword}
+                    onChange={handleInputChange}
+                    error={!!errors.confirmPassword}
+                    helperText={errors.confirmPassword}
+                  />
+                </Grid>
+              </Grid>
               <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                 Sign Up
               </Button>

@@ -22,13 +22,13 @@ function App() {
     }
   }, []);
   return (
-    <BrowserRouter basename="/contest-notifier">
+    <BrowserRouter>
       <UserNameProvider>
     <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
     <Routes>
     <Route path='/' element={<Platform/>}></Route>
     <Route path='/about' element={<About/>}></Route>
-    <Route path='contact' element={<Contact/>}></Route>
+    <Route path='/contact' element={<Contact/>}></Route>
     <Route path='/contestpage/:Val' element={<Contest/>}></Route>
     <Route path='/signup' element={<SignUp setIsLoggedIn={setIsLoggedIn}/>}></Route>
     <Route path='/signin' element={<SignIn setIsLoggedIn={setIsLoggedIn}/>}></Route>
