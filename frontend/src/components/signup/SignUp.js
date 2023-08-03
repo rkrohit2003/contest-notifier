@@ -75,7 +75,7 @@ export default function SignUp({ setIsLoggedIn }) {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/users', user);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/users`, user);
       setIsLoggedIn(true);
       setUserName(user.userName);
       localStorage.setItem('isLoggedIn', user.userName.toString());

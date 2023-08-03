@@ -36,7 +36,7 @@ const sendNotificationEmail = async (req, res) => {
 // Function to schedule contest notifications
 const scheduleContestNotifications = async () => {
   try {
-    const usersResponse = await axios.get('http://localhost:8000/api/users');
+    const usersResponse = await axios.get(`${process.env.BACKEND}/api/users`);
     const users = usersResponse.data;
     const contestsResponse = await axios.get('https://kontests.net/api/v1/all');
     const contests = contestsResponse.data;

@@ -30,7 +30,7 @@ export default function SignIn({ setIsLoggedIn }) {
     const password = data.get('password');
 
     try {
-      const response = await axios.post('http://localhost:8000/api/user', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/user`, {
         userName,
         password
       });
