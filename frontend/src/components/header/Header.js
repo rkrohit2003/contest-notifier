@@ -9,7 +9,7 @@ export const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   
   const handleLogout = () => {
     setIsLoggedIn(false);
-    localStorage.setItem('isLoggedIn', '');
+    localStorage.setItem('isLoggedIn', null);
     navigate("/");
   };
 
